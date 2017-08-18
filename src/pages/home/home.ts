@@ -1,3 +1,5 @@
+import { ScheduleDetailsPage } from './../schedule-details/schedule-details';
+import { SampleDataProvider } from './../../providers/sample-data/sample-data';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -7,8 +9,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  groups: Array<any> = [];
+  constructor(public navCtrl: NavController, public sampleDataProvider: SampleDataProvider) {
+    this.sampleDataProvider.getSampleData().subscribe((data) => {
+      this.groups = data.schedule;
+    });
   }
+
+  goToSessionDetail(session) {
+
+    this.navCtrl.push(ScheduleDetailsPage, { session: session });
+  }
+
 
 }

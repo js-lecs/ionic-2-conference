@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+    <ion-title>Details</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>{{session.name}}</h1>
+  <h4 *ngFor="let speaker of session?.speakers">
+    {{speaker.name}}
+  </h4>
+  <p>
+    {{session.timeStart}} - {{session.timeEnd}}
+  </p>
+  <p>{{session.location}}</p>
+  <p>{{session.description}}</p>
+</ion-content>

@@ -1,0 +1,54 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <div padding>
+      <img src="http://apply.sliit.lk/Content/logos.jpg" alt="">
+      <h2 style="text-align:center"> Mini Hackathon</h2>
+    </div>
+
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Retype</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button block outline color="primary" (click)="goToLogin()">Back to Login</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button block  color="primary"  >Sign Up</button>
+      </ion-col>
+
+    </ion-row>
+  </ion-list>
+</ion-content>

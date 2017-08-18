@@ -1,0 +1,22 @@
+<ion-menu [content]="mycontent">
+  <ion-content>
+    <ion-list>
+      <div padding>
+        <img src="assets/images/logo.png" alt="">
+      </div>
+      <ion-list-header>
+        Menu
+      </ion-list-header>
+      <a (click)="navigate('Schedule')" ion-item menuClose>
+          Schedule
+        
+      </a>
+      <a (click)="navigate('Speakers')" ion-item menuClose>
+         Speakers
+         
+      </a>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
